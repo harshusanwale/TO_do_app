@@ -1,5 +1,5 @@
 #TO_do_app
-TO_do_app REST API with Passport Authentication in laravel 8.
+REST API with Passport Authentication in laravel 8.
 
 # Requirements
 1. xampp server
