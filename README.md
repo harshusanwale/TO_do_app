@@ -118,7 +118,7 @@ Then create a database named blog and then do a database migration using this co
 Run server using this command-
 php artisan serve
 
-Now simply you can run above listed url like:
+Now simply you can run above listed url on postman:
 
 - **User Register API:** Verb:POST, URL:http://127.0.0.1:8000/api/register and for authentication using bearer token
 - request param : name:harshita
