@@ -37,10 +37,10 @@ class UserController extends Controller
         $success =  $user;
         $success['token'] = $user->createToken('MyApp')-> accessToken;
         $data = array(
-            'id' => $user->id,
-            'name' => $user->name,
-            'password' => $user->password,
-            'token' =>  $user->token,
+            'id' => $success->id,
+            'name' => $success->name,
+            'password' => $success->password,
+            'token' =>  $success->token,
             'created_at' => date('d-m-Y H:i:s ',strtotime($user->created_at)),
             'updated_at' => date('d-m-Y H:i:s ',strtotime($user->updated_at))
         );

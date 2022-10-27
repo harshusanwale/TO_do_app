@@ -17,9 +17,9 @@ class CreateTaskTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('task');
-            $table->boolean('status')
-                ->default(0)
-                ->comment('0=Pending, 1=Completed');
+            $table->string('status')
+                ->default('pending')
+                ->comment('pending, completed');
             $table->timestamps();
         });
     }

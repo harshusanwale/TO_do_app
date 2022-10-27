@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,8 +28,13 @@ Route::post('/login', [UserController::class, 'customLogin']);
 Route::group(['middleware' => 'auth'],function(){
 Route::get('dashboard', [UserController::class, 'dashboard']); 
 Route::get('logout', [UserController::class, 'logout']);
+Route::get('userlist', [UserController::class, 'userDashboard']);
 
+Route::get('addtask', [UserController::class, 'userAddTask']);
+Route::post('submit-form', [UserController::class, 'storeTask']);
 
+Route::get('edit/{id}', [UserController::class, 'statusChange']);
+Route::post('edit_form/{id}', [UserController::class, 'edit_status']);
 });
 
 
